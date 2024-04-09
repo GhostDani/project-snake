@@ -1,6 +1,6 @@
 
-const audio = new Audio("../assets/theme.mp3")
-const audioPlay = new Audio("../assets/play.mp3")
+const audio = new Audio("./assets/theme.mp3")
+const audioPlay = new Audio("./assets/play.mp3")
 const buttonPlay = document.querySelector(".btn-play")
 const buttonAudio = document.querySelector(".btn-aud")
  
