@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +9,7 @@
 }
 
 body {
-    background-color: #408bac;
+    background-color:#3f5f2e;
     display: flex;
     min-height: 100vh;
     align-items: center;
@@ -31,6 +32,7 @@ body {
 
 canvas {
     background-color: #111111;
+    border: 2px solid #1DBEC0 ;
 }
 
 .score {
@@ -41,10 +43,12 @@ canvas {
 }
 
 .score--value {
+   padding: 10px 0 4px 0;
+    font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
     font-weight: 700;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     display: block;
-    margin-top: -10px;
+    margin-top: 1px;
 }
 
 .menu-screen {
@@ -56,7 +60,8 @@ canvas {
 }
 
 .game-over {
-    color: rgb(169, 208, 243);
+    font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+    color: #1DBEC0;
     text-shadow: 1px 1px white;
     text-transform: uppercase;
     font-weight: 700;
@@ -98,7 +103,7 @@ canvas {
     cursor: pointer;
 }
 .btn-play:hover, .btn-home:hover, .btn-home-fixed:hover{
-    background-color: rgb(169, 208, 243);
+    background-color:#1DBEC0;
     color: aliceblue;
     box-shadow: 1px 2px white;
 }

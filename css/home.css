@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 * {
     text-decoration: none;
@@ -14,7 +16,6 @@ body {
     display: flex;
     min-height: 100vh;
     align-items: center;
-    
     flex-direction: column;
     color: white;
 }
@@ -51,7 +52,7 @@ header {
     flex-direction: column;
     width: 600px;
     height: 800px;
-    background-color: #408cace0;
+    background-color:  #3f5f2eda;
     border-radius: 20px;
     border: 2px solid black;
    
@@ -68,15 +69,15 @@ header {
 }
 
 .title {
-    color: rgb(169, 208, 243);
+    font-family: "Luckiest Guy", Arial, Helvetica, sans-serif;
+    color: #1DBEC0;
     text-shadow: 1px 1px white;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 
-.btn-play, .btn-home {
+.btn-play{
     border: none;
     border-radius: 100px;
     padding: 10px 15px 10px 12px;
@@ -91,8 +92,8 @@ header {
     cursor: pointer;
 }
 
-.btn-play:hover, .btn-home:hover{
-    background-color: rgb(169, 208, 243);
+.btn-play:hover{
+    background-color: #1DBEC0;
     color: aliceblue;
     box-shadow: 1px 2px white;
 }

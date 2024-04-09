@@ -20,3 +20,5 @@ const buttonAudio = document.querySelector(".btn-aud")
                 audio.muted = true;
             }
         })
+
+        
