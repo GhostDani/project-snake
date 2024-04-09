@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppings", sans-serif;
+}
+
+body {
+    background-image: url("/assets/background.jpg");
+    background-size: cover;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    
+    flex-direction: column;
+    color: white;
+}
+
+header {
+    margin-left: -31rem;
+    justify-content: space-between;
+    padding: 20px;
+
+    color: white;
+}
+
+
+.btn-aud {      /*BOTÃO*/
+    gap: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 6px 6px 6px 6px;
+    font-size: .8rem;
+    color: #333333;
+    cursor: pointer;
+}
+
+.btn-aud:active{
+    background-color: #b6b6b6;
+    color: white;
+}
+
+.game-container {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+    width: 600px;
+    height: 800px;
+    background-color: #408cace0;
+    border-radius: 20px;
+    border: 2px solid black;
+   
+    
+}
+
+
+.menu-screen {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.title {
+    color: rgb(169, 208, 243);
+    text-shadow: 1px 1px white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+
+.btn-play, .btn-home {
+    border: none;
+    border-radius: 100px;
+    padding: 10px 15px 10px 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333333;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.btn-play:hover, .btn-home:hover{
+    background-color: rgb(169, 208, 243);
+    color: aliceblue;
+    box-shadow: 1px 2px white;
+}
+
+
+.ver{
+    margin-top: 10px;
+    margin-left: 30rem;
+    text-shadow: 1px 1px  rgb(0, 0, 0);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+img{
+    margin-top: 2rem;
+    width: 200px;
+    height: 200px;
+
+}
+
+img:hover, .symbols:hover{
+    transform: scale(1.1);
+    transition: 0.4s ease;
+}
+
+.tutorial{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.symbols{
+    display: inline;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 1px solid white;
+
+}
+
+.tutorial-btns{
+    margin-top: 15px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 15px;
+}
+.outlined{
+    padding: 3px;
+    display: none;
+    font-size: 12px;
+}
+
+span:hover > .outlined {
+    display:flex;}

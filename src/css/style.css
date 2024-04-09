@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppings", sans-serif;
+}
+
+body {
+    background-color: #408bac;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.game-container {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+    width: 600px;
+    height: 800px;
+    background-color: #408bac;
+    
+}
+
+canvas {
+    background-color: #111111;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.score--value {
+    font-weight: 700;
+    font-size: 4.5rem;
+    display: block;
+    margin-top: -10px;
+}
+
+.menu-screen {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.game-over {
+    color: rgb(169, 208, 243);
+    text-shadow: 1px 1px white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.final-score {
+    text-shadow:1px 1px  rgba(169, 208, 243, 0.342);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.btn-play, .btn-home {
+    border: none;
+    border-radius: 100px;
+    padding: 10px 15px 10px 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333333;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.btn-home-fixed{
+    border: none;
+    border-radius: 100px;
+    padding: 10px 15px 10px 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333333;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.btn-play:hover, .btn-home:hover, .btn-home-fixed:hover{
+    background-color: rgb(169, 208, 243);
+    color: aliceblue;
+    box-shadow: 1px 2px white;
+}
+
+a{
+    text-decoration: none;
+}
+
+.ver{
+    position: fixed;
+    bottom: 10px;
+    margin-left: 30rem;
+    display: inline;
+    align-items: right;
+    justify-content: right;
+    color: white;
+    font-size: .6rem;
+
+}
