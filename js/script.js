@@ -20,6 +20,10 @@ const randomWord = words[Math.floor(Math.random() * words.length)];
 
 const scoreType = randomWord;
 
+//inica o relógio
+stop()
+start()
+//
 
 
 const incrementScore = () => {
@@ -167,6 +171,7 @@ const gameOver = () => {
     menu.style.display = "flex"
     finalScore.innerText = score.innerText
     canvas.style.filter = "blur(5px)"
+    pause()
     
     
 }
@@ -213,5 +218,54 @@ buttonPlay.addEventListener("click", () => {
     canvas.style.filter = "none"
     audioPlay.play()
     snake = [initialPosition]
-    
+    stop()
+    start()
 })
+
+
+
+//relógio
+
+var sec=0
+var min=0
+var hr=0
+
+var interval
+
+function twoDigits(digit){
+    if(digit<10){
+        return('0'+digit)
+    }else{
+        return(digit)
+    }
+}
+
+function start(){
+    watch()
+    interval= setInterval(watch,10)
+}
+
+function pause(){
+    clearInterval(interval)
+}
+
+function stop(){
+    clearInterval(interval)
+    sec=0
+    min=0
+    
+    document.getElementById('watch').innerText='00:00:00'
+}
+
+function watch(){
+    sec++
+    if(sec==60){
+        min++
+        sec=0
+        if(min==60){
+            min=0
+            hr++
+        }
+    }
+    document.getElementById('watch').innerText=twoDigits(hr)+':'+twoDigits(min)+':'+twoDigits(sec)
+}

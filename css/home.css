@@ -60,13 +60,6 @@ header {
 }
 
 
-.menu-screen {
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1;
-}
 
 .title {
     font-family: "Luckiest Guy", Arial, Helvetica, sans-serif;
@@ -142,10 +135,6 @@ img:hover, .symbols:hover{
      gap: 15px;
 }
 .outlined{
-    padding: 3px;
-    display: none;
+    padding: 5px;
     font-size: 12px;
 }
-
-span:hover > .outlined {
-    display:flex;}

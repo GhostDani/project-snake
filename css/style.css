@@ -18,6 +18,13 @@ body {
     color: white;
 }
 
+#watch{
+    display: flex;
+    flex-direction: column;
+    margin-left:-34rem;
+    font-size: .8rem;
+}
+
 .game-container {
     padding-top: 50px;
     display: flex;
@@ -43,7 +50,8 @@ canvas {
 }
 
 .score--value {
-   padding: 10px 0 4px 0;
+    margin: auto !important;;
+     padding: 10px 0 1px 0;
     font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 3.5rem;
@@ -60,6 +68,7 @@ canvas {
 }
 
 .game-over {
+    padding-bottom: 10px;
     font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
     color: #1DBEC0;
     text-shadow: 1px 1px white;
