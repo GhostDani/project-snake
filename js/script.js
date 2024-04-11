@@ -3,22 +3,42 @@ const ctx = canvas.getContext("2d")
 
 const score = document.querySelector(".score--value")
 const finalScore = document.querySelector(".final-score > span")
+const bestScore = document.querySelector(".best-score > span")
 const menu = document.querySelector(".menu-screen")
 const buttonPlay = document.querySelector(".btn-play")
+const ButtonPlayHome = document.querySelector(".play-home")
 
 const audio = new Audio("./assets/audio.mp3")
 const gameOverAudio = new Audio("./assets/gameover.mp3")
 const audioPlay = new Audio("./assets/play.mp3")
+const titleAudio = new Audio("./assets/Title.mp3")
+const clickAudio = new Audio("./assets/click.mp3")
 
 const size = 30
 
 const initialPosition = { x: 270, y: 240 }
 let snake = [initialPosition]
 
-const words = ["orange", "apple", "blueberry"];
-const randomWord = words[Math.floor(Math.random() * words.length)];
 
-const scoreType = randomWord;
+function setSpeed (arg) {
+    speed = arg;
+};
+
+function setLevel (arg) {
+    level = arg;
+}
+function getLevel () {
+    return level;
+};
+//////////////
+
+   
+
+
+//const words = ["orange", "apple", "blueberry"];
+//const randomWord = words[Math.floor(Math.random() * words.length)];
+
+//const scoreType = randomWord;
 
 //inica o relógio
 stop()
@@ -28,8 +48,8 @@ start()
 
 const incrementScore = () => {
     score.innerText = +score.innerText + 10;
+    
 }
-
 
 const randomNumber = (min, max) => {
     return Math.round(Math.random() * (max - min) + min)
@@ -59,11 +79,10 @@ let direction, loopId
 const drawFood = () => {
     const { x, y, color } = food
     ctx.shadowColor = color
-    ctx.shadowBlur = 6
+    ctx.shadowBlur = 30
     ctx.fillStyle = color
     ctx.fillRect(x, y, size, size)
     ctx.shadowBlur = 0
-    
 }
 
 const drawSnake = () => {
@@ -157,14 +176,15 @@ const checkCollision = () => {
     const selfCollision = snake.find((position, index) => {
         return index < neckIndex && position.x == head.x && position.y == head.y
     })
-
+    
     if (wallCollision || selfCollision) {
-       gameOverAudio.play()  
+        
        gameOver() 
        
     }
     
 }
+
 
 const gameOver = () => {
     direction = undefined
@@ -173,8 +193,12 @@ const gameOver = () => {
     canvas.style.filter = "blur(5px)"
     pause()
     
-    
+    if (finalScore.innerText >= bestScore.innerText) {
+        bestScore.innerText = finalScore.innerText
+    }
 }
+
+
 
 const gameLoop = () => {
     clearInterval(loopId)
@@ -186,11 +210,11 @@ const gameLoop = () => {
     drawSnake()
     chackEat()
     checkCollision()
-
+    
     loopId = setTimeout(() => {
-        gameLoop()
+       gameLoop();
     }, 300)
-}
+   }
 
 gameLoop()
 
@@ -216,15 +240,18 @@ buttonPlay.addEventListener("click", () => {
     score.innerText = "00"
     menu.style.display = "none"
     canvas.style.filter = "none"
-    audioPlay.play()
+    titleAudio.play()
     snake = [initialPosition]
     stop()
     start()
 })
 
 
+ButtonPlayHome.addEventListener("click", () => {
+clickAudio.play()
+})
 
-//relógio
+                //relógio
 
 var sec=0
 var min=0
@@ -242,7 +269,7 @@ function twoDigits(digit){
 
 function start(){
     watch()
-    interval= setInterval(watch,17)
+    interval= setInterval(watch,1000)
 }
 
 function pause(){
@@ -269,3 +296,4 @@ function watch(){
     }
     document.getElementById('watch').innerText=twoDigits(hr)+':'+twoDigits(min)+':'+twoDigits(sec)
 }
+                    //      Fim Relógio 

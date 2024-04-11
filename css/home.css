@@ -23,14 +23,12 @@ body {
 header {
     margin-left: -31rem;
     justify-content: space-between;
-    padding: 20px;
-
+    padding: 5px;
     color: white;
 }
 
 
 .btn-aud {      /*BOTÃO*/
-    gap: 10px;
     border: 1px solid black;
     border-radius: 3px;
     padding: 6px 6px 6px 6px;
@@ -55,8 +53,6 @@ header {
     background-color:  #3f5f2eda;
     border-radius: 20px;
     border: 2px solid black;
-   
-    
 }
 
 
@@ -105,7 +101,6 @@ img{
     margin-top: 2rem;
     width: 200px;
     height: 200px;
-
 }
 
 img:hover, .symbols:hover{
@@ -124,7 +119,6 @@ img:hover, .symbols:hover{
     font-size: 2rem;
     font-weight: 700;
     border: 1px solid white;
-
 }
 
 .tutorial-btns{

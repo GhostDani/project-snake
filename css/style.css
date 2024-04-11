@@ -34,7 +34,6 @@ body {
     width: 600px;
     height: 800px;
     background-color: #408bac;
-    
 }
 
 canvas {
@@ -57,6 +56,9 @@ canvas {
     font-size: 3.5rem;
     display: block;
     margin-top: 1px;
+}
+.best-score{
+    margin-top: 3px;
 }
 
 .menu-screen {
@@ -130,5 +132,4 @@ a{
     justify-content: right;
     color: white;
     font-size: .6rem;
-
 }
