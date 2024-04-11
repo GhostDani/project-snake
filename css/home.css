@@ -89,6 +89,8 @@ header {
 
 
 .ver{
+    padding: 3px;
+    background-color: #3f5f2eda;
     margin-top: 10px;
     margin-left: 30rem;
     text-shadow: 1px 1px  rgb(0, 0, 0);
