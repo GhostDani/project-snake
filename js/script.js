@@ -30,15 +30,7 @@ function setLevel (arg) {
 function getLevel () {
     return level;
 };
-//////////////
 
-   
-
-
-//const words = ["orange", "apple", "blueberry"];
-//const randomWord = words[Math.floor(Math.random() * words.length)];
-
-//const scoreType = randomWord;
 
 //inica o relógio
 stop()
