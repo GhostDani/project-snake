@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color:#3f5f2e;
+    background-color:#616161;
     display: flex;
     min-height: 100vh;
     align-items: center;
@@ -38,7 +38,7 @@ body {
 
 canvas {
     background-color: #111111;
-    border: 2px solid #1DBEC0 ;
+    border: 2px solid #eeeeee ;
 }
 
 .score {
@@ -82,7 +82,7 @@ canvas {
 .game-over {
     padding-bottom: 10px;
     font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
-    color: #1DBEC0;
+    color: #626262;
     text-shadow: 1px 1px white;
     text-transform: uppercase;
     font-weight: 700;
@@ -95,7 +95,7 @@ canvas {
     font-size: 1.5rem;
 }
 
-.btn-play, .btn-home,.btn-next {
+.btn-play, .btn-home,.btn-next, .btn-reset{
     border: none;
     border-radius: 100px;
     padding: 10px 15px 10px 12px;
@@ -124,8 +124,8 @@ canvas {
     cursor: pointer;
 }
 
-.btn-play:hover, .btn-home:hover, .btn-home-fixed:hover,.btn-next:hover{
-    background-color:#1DBEC0;
+.btn-play:hover, .btn-home:hover, .btn-home-fixed:hover,.btn-next:hover, .btn-reset:hover{
+    background-color:#cacaca;
     color: aliceblue;
     box-shadow: 1px 2px white;
 }
@@ -144,11 +144,7 @@ a{
     color: white;
     font-size: .6rem;
 }
-img{
-    margin-top: 2rem;
-    width: 200px;
-    height: 200px;
-}
+
 .btn-pause{
     position: fixed;
     bottom: 83px;
@@ -156,5 +152,6 @@ img{
     display: inline;
     align-items: right;
     justify-content: right;
+
     font-size: .6rem;
 }

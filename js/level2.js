@@ -8,6 +8,7 @@ const menu = document.querySelector(".menu-screen")
 const menuPass = document.querySelector(".menu-pass")
 const buttonPlay = document.querySelector(".btn-play")
 const ButtonPlayHome = document.querySelector(".play-home")
+const buttonReset = document.querySelector(".btn-reset")
 const buttonPauseGame = document.querySelector(".btn-pause")
 
 const audio = new Audio("./assets/audio.mp3")
@@ -15,7 +16,7 @@ const gameOverAudio = new Audio("./assets/gameover.mp3")
 const audioPlay = new Audio("./assets/play.mp3")
 const titleAudio = new Audio("./assets/Title.mp3")
 const clickAudio = new Audio("./assets/click.mp3")
-themeAudio = new Audio("./assets/theme.mp3")
+const themeAudio = new Audio("./assets/theme.mp3")
 
 const size = 30
 
@@ -81,11 +82,11 @@ const drawFood = () => {
 }
 
 const drawSnake = () => {
-    ctx.fillStyle = "#ddd"
+    ctx.fillStyle = "#defd"
 
     snake.forEach((position, index) => {
         if (index == snake.length - 1) {
-            ctx.fillStyle = "#1DBEC0"
+            ctx.fillStyle = "#eeeeee"
            
         }
 
@@ -100,7 +101,6 @@ const moveSnake = () => {
 
     if (direction == "right") {
         snake.push({ x: head.x + size, y: head.y })
-        
     }
 
     if (direction == "left") {
@@ -196,7 +196,7 @@ const gameOver = () => {
 
 const missionPassed = () => {
     
-    if (score.innerText == "500") {
+    if (score.innerText == "20") {
     menuPass.style.display = "flex"
     finalScore.innerText = score.innerText
     canvas.style.filter = "blur(5px)"
@@ -208,7 +208,7 @@ const missionPassed = () => {
 
 const gameLoop = () => {
     clearInterval(loopId)
-    
+
     ctx.clearRect(0, 0, 600, 600)
     drawGrid()
     drawFood()
@@ -219,7 +219,7 @@ const gameLoop = () => {
     missionPassed()
     loopId = setTimeout(() => {
        gameLoop();
-    }, 300)
+    }, 200)
    }
 
 gameLoop()
@@ -227,7 +227,6 @@ gameLoop()
 document.addEventListener("keydown", ({ key }) => {
     if (key == "ArrowRight" && direction != "left") {
         direction = "right"
-        play()
     }
 
     if (key == "ArrowLeft" && direction != "right") {
@@ -243,8 +242,8 @@ document.addEventListener("keydown", ({ key }) => {
     }
 })
 
-buttonPlay.addEventListener("click", () => {
-    score.innerText = "00"
+buttonReset.addEventListener("click", () => {
+    score.innerText = "500"
     menu.style.display = "none"
     canvas.style.filter = "none"
     titleAudio.play()
@@ -252,12 +251,11 @@ buttonPlay.addEventListener("click", () => {
     stop()
     start()
 })
+
 buttonPauseGame.addEventListener("click", () => {
     direction = undefined
-    pause()
-   
-}
-);
+    
+});
 
 ButtonPlayHome.addEventListener("click", () => {
 clickAudio.play()

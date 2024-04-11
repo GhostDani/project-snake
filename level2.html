@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/level2.css">
     
     <title>Snake Game</title>
 </head>
@@ -17,10 +17,11 @@
         </span>
     </button>
     <div class="contentBestScore"></div>
-    <div class="score">Pontuação: <span class="score--value">00</span></div>
+    <div class="score">Pontuação: <span class="score--value">500</span></div>
     <span class="best-score">Maior Pontuação: <span>00</span></span>
     <div id='watch'>
         <h1 >00:00:00</h1>
+        
     </div>
     </div>
 
@@ -29,26 +30,34 @@
         <span class="final-score">Pontuação final: <span>00</span></span>
        
 
-        <button class="btn-play">
+        <a href="game.html"><button class="btn-play">
             <span class="material-symbols-outlined">
                 play_circle
             </span>
             
             Jogar novamente
+        </button> </a>
+
+        <button class="btn-reset">
+            <span class="material-symbols-outlined">
+                play_circle
+            </span>
+            Reiniciar Fase
         </button>
+       
  
     </div>
 
     <div class="menu-screen menu-pass">
         <span class="game-over">Fase 1<br/> Completa </span>
-       <img src="assets/pixel.jpg" alt="">
-       <a href="level2.html"> <button class="btn-next">
+       
+        <button class="btn-next">
             <span class="material-symbols-outlined">
                 videogame_asset
             </span>
             Próximo nível
-        </button></a>
-        
+        </button>
+ 
     </div>
     
     <canvas width="600" height="600"></canvas>
@@ -73,6 +82,6 @@
         <p >Versão 0.50 beta</p>
      </div> 
      
-     <script src="./js/script.js"></script>
+     <script src="./js/level2.js"></script>
 </body>
 </html>
