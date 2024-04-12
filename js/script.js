@@ -6,9 +6,11 @@ const finalScore = document.querySelector(".final-score > span")
 const bestScore = document.querySelector(".best-score > span")
 const menu = document.querySelector(".menu-screen")
 const menuPass = document.querySelector(".menu-pass")
+const menuPause = document.querySelector(".menu-pause")
 const buttonPlay = document.querySelector(".btn-play")
 const ButtonPlayHome = document.querySelector(".play-home")
 const buttonPauseGame = document.querySelector(".btn-pause")
+const ButtonResume = document.querySelector(".btn-resume")
 
 const audio = new Audio("./assets/audio.mp3")
 const gameOverAudio = new Audio("./assets/gameover.mp3")
@@ -244,6 +246,7 @@ document.addEventListener("keydown", ({ key }) => {
 })
 
 buttonPlay.addEventListener("click", () => {
+    clickAudio.play()
     score.innerText = "00"
     menu.style.display = "none"
     canvas.style.filter = "none"
@@ -253,11 +256,23 @@ buttonPlay.addEventListener("click", () => {
     start()
 })
 buttonPauseGame.addEventListener("click", () => {
+    clickAudio.play()
+    menuPause.style.display = "flex"
     direction = undefined
+    canvas.style.filter = "blur(5px)"
     pause()
    
 }
 );
+
+ButtonResume.addEventListener("click", () => {
+    clickAudio.play()
+    menuPause.style.display = "none"
+    canvas.style.filter = "none"
+    start()
+    titleAudio.play()
+    
+})
 
 ButtonPlayHome.addEventListener("click", () => {
 clickAudio.play()

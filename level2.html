@@ -11,11 +11,19 @@
     <title>Snake Game</title>
 </head>
 <body>
+
     <button class="btn-pause">
         <span class="material-symbols-outlined">
             pause
         </span>
     </button>
+    <button class="btn-resume">
+       <span class="material-symbols-outlined">
+            play_arrow
+        </span>
+    </button>
+
+    
     <div class="contentBestScore"></div>
     <div class="score">Pontuação: <span class="score--value">500</span></div>
     <span class="best-score">Maior Pontuação: <span>00</span></span>
@@ -57,9 +65,13 @@
             </span>
             Próximo nível
         </button>
- 
     </div>
     
+    <div class="menu-screen menu-pause">
+        <span class="game-over">Pause</span>
+       <img src="assets/pixel.jpg" alt="">
+    </div>
+
     <canvas width="600" height="600"></canvas>
     
 
@@ -79,7 +91,7 @@
 -->
     
     <div class="ver">  
-        <p >Versão 0.50 beta</p>
+        <p >Versão 0.50.25 beta</p>
      </div> 
      
      <script src="./js/level2.js"></script>

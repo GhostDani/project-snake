@@ -145,13 +145,27 @@ a{
     font-size: .6rem;
 }
 
+img{
+    margin-top: 2rem;
+    width: 200px;
+    height: 200px;
+}
 .btn-pause{
+    position: fixed;
+    bottom: 83px;
+    margin-left: 32.3rem;
+    display: inline;
+    align-items: right;
+    justify-content: right;
+    font-size: .6rem;
+}
+
+.btn-resume{
     position: fixed;
     bottom: 83px;
     margin-left: 36rem;
     display: inline;
     align-items: right;
     justify-content: right;
-
     font-size: .6rem;
 }
