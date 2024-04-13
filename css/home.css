@@ -11,6 +11,7 @@
 }
 
 body {
+    margin-top: 2rem;
     background-image: url("../assets/background.jpg");
     background-size: cover;
     display: flex;
@@ -42,6 +43,13 @@ header {
     color: white;
 }
 
+.menu-items{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
 .game-container {
     padding-top: 50px;
     display: flex;
@@ -56,7 +64,6 @@ header {
 }
 
 
-
 .title {
     font-family: "Luckiest Guy", Arial, Helvetica, sans-serif;
     color: #1DBEC0;
@@ -67,24 +74,22 @@ header {
 
 
 .btn-play{
+    color: white;
     border: none;
-    border-radius: 100px;
-    padding: 10px 15px 10px 12px;
-    font-size: 1rem;
+    background: none;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: #333333;
-    margin-top: 40px;
+    padding-top: 5px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
     cursor: pointer;
 }
 
 .btn-play:hover{
-    background-color: #1DBEC0;
+    background-color:#1DBEC0;
     color: aliceblue;
     box-shadow: 1px 2px white;
+    transform: scale(1.1);
+    transition: 0.3s ease;
 }
 
 
@@ -111,7 +116,7 @@ img:hover, .symbols:hover{
 }
 
 .tutorial{
-    padding-top: 50px;
+    padding-top: 3rem;
     text-align: center;
     font-size: 1.2rem;
     font-weight: 500;

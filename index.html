@@ -10,25 +10,25 @@
     <title>Project Snake</title>
 </head>
 <body>
-
-<header>
-        <button onclick="" class="btn-aud">
-            Música on/off
-        </button>
-
-    </header>
-
+   
     <div class="game-container">  
     
         <span class="title">Project Snake</span>
         <img src="assets/pixel.jpg" alt=""> 
 
-        <a href="game.html"><button class="btn-play play-home">
-            <span class="material-symbols-outlined">
-                play_circle
-            </span>
+        <div class="menu-items">
+        <a href="game.html"><button class="btn-play play-home" onmouseover="audioTransition.play()">
             Jogar
         </button></a> 
+        <button class="btn-play"  onclick="toggleFullScreen()" onmouseover="audioTransition.play()">
+            Tela Cheia
+        </button>
+        <button class="btn-aud btn-play" onmouseover="audioTransition.play()">
+            Música on/off
+        </button>
+
+    </div>
+
 
     <div class="tutorial">
      Use as setas do teclado <br/>para mover  a cobra</div>
@@ -59,7 +59,7 @@
     
 
     <div class="ver">  
-       <p >Versão 0.50.25 beta</p>
+       <p >Versão 0.50.50 beta</p>
     </div> 
     <script src="./js/home.js"></script>
 </body>

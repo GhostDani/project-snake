@@ -61,6 +61,16 @@ canvas {
     margin-top: 3px;
 }
 
+.menu{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    text-align: center;
+    padding: 1rem;
+}
+
 .menu-screen, .menu-pass{
     position: absolute;
     display: none;
@@ -90,12 +100,35 @@ canvas {
 }
 
 .final-score {
+    margin-bottom: 10px;
     text-shadow:1px 1px  rgba(169, 208, 243, 0.342);
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
-.btn-play, .btn-home,.btn-next, .btn-reset{
+.btn-play{
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    color: white;
+     border: none;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-top: 5px;
+    display: flex;
+    cursor: pointer;
+}
+.btn-reset{
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    color: white;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-top: 5px;
+    display: flex;
+    cursor: pointer;
+}
+.btn-home,.btn-next{
     border: none;
     border-radius: 100px;
     padding: 10px 15px 10px 12px;
@@ -111,7 +144,7 @@ canvas {
 }
 .btn-home-fixed{
     border: none;
-    border-radius: 100px;
+    border-radius: 10px;
     padding: 10px 15px 10px 12px;
     font-size: 1rem;
     font-weight: 600;

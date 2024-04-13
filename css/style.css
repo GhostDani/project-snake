@@ -80,7 +80,7 @@ canvas {
 }
 
 .game-over {
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
     color: #1DBEC0;
     text-shadow: 1px 1px white;
@@ -89,13 +89,42 @@ canvas {
     font-size: 3rem;
 }
 
-.final-score {
-    text-shadow:1px 1px  rgba(169, 208, 243, 0.342);
-    font-weight: 500;
-    font-size: 1.5rem;
+.menu{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    text-align: center;
+    padding: 1rem;
 }
 
-.btn-play, .btn-home,.btn-next {
+.final-score {
+    margin-bottom: 10px;
+    text-shadow:1px 1px  rgba(169, 208, 243, 0.342);
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.btn-play{
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    color: white;
+     border: none;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-top: 5px;
+    display: flex;
+    cursor: pointer;
+}
+    
+.btn-play:hover{
+    color: #1DBEC0;
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+.btn-home,.btn-next {
     border: none;
     border-radius: 100px;
     padding: 10px 15px 10px 12px;
@@ -111,7 +140,7 @@ canvas {
 }
 .btn-home-fixed{
     border: none;
-    border-radius: 100px;
+    border-radius: 10px;
     padding: 10px 15px 10px 12px;
     font-size: 1rem;
     font-weight: 600;

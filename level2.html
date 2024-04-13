@@ -34,22 +34,16 @@
     </div>
 
     <div class="menu-screen">
+        
         <span class="game-over">game over</span>
         <span class="final-score">Pontuação final: <span>00</span></span>
        
 
-        <a href="game.html"><button class="btn-play">
-            <span class="material-symbols-outlined">
-                play_circle
-            </span>
-            
+        <a href="game.html"><button class="btn-play" onmouseover="audioTransition.play()">
             Jogar novamente
         </button> </a>
 
-        <button class="btn-reset">
-            <span class="material-symbols-outlined">
-                play_circle
-            </span>
+        <button class="btn-reset" onmouseover="audioTransition.play()">
             Reiniciar Fase
         </button>
        
@@ -72,26 +66,35 @@
        <img src="assets/pixel.jpg" alt="">
     </div>
 
+    <div class="menu-screen menu">
+        <span class="game-over">Menu</span>
+        <button class="btn-play close-menu"  onmouseover="audioTransition.play()">
+            Continuar
+        </button>
+        <button class="btn-play"  onmouseover="audioTransition.play()" onclick="toggleFullScreen()">
+            Tela Cheia
+        </button>
+        <button onclick="" class="btn-aud btn-play"  onmouseover="audioTransition.play()">
+            Música on/off
+        </button>
+        <a href="index.html"><button class="btn-play"  onmouseover="audioTransition.play()">
+            Sair
+        </button></a>
+    </div>
+    
+
     <canvas width="600" height="600"></canvas>
     
 
-    <a href="index.html"><button class="btn-home-fixed play-home">
+    <button class="btn-home-fixed play-home">
         <span class="material-symbols-outlined">
-            home
+            menu
         </span>
-        Início
-    </button></a>
-    
-   <!-- <button class="btn-home-fixed">
-        <span class="material-symbols-outlined playPause">
-            gamepad
-        </span>
-        Play/Pause
+        Menu
     </button>
--->
-    
+
     <div class="ver">  
-        <p >Versão 0.50.25 beta</p>
+        <p >Versão 0.50.50 beta</p>
      </div> 
      
      <script src="./js/level2.js"></script>

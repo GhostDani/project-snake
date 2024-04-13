@@ -35,14 +35,12 @@
         <span class="game-over">game over</span>
         <span class="final-score">Pontuação final: <span>00</span></span>
        
-
-        <button class="btn-play">
-            <span class="material-symbols-outlined">
-                play_circle
-            </span>
-            
+        <button class="btn-play" onmouseover="audioTransition.play()">
             Jogar novamente
         </button>
+        <a href="index.html"><button class="btn-play" onmouseover="audioTransition.play()">
+            Sair
+        </button></a>
  
     </div>
 
@@ -62,21 +60,41 @@
        <img src="assets/pixel.jpg" alt="">
     </div>
     
+    <div class="menu-screen menu">
+        <span class="game-over">Menu</span>
+        <button class="btn-play close-menu"  onmouseover="audioTransition.play()">
+            Continuar
+        </button>
+
+        <button class="btn-play"  onclick="toggleFullScreen()" onmouseover="audioTransition.play()">
+            Tela Cheia
+        </button>
+        <button onclick="" class="btn-aud btn-play"  onmouseover="audioTransition.play()">
+            Música on/off
+        </button>
+        <a href="index.html"><button class="btn-play"  onmouseover="audioTransition.play()">
+            Sair
+        </button></a>
+    </div>
+    
+    
+
     <canvas width="600" height="600"></canvas>
     
 
-    <a href="index.html"><button class="btn-home-fixed play-home">
+    <button class="btn-home-fixed play-home">
         <span class="material-symbols-outlined">
-            home
+            menu
         </span>
-        Início
-    </button></a>
+        Menu
+    </button>
     
 
     <div class="ver">  
-        <p >Versão 0.50.25 beta</p>
+        <p >Versão 0.50.50 beta</p>
      </div> 
      
      <script src="./js/script.js"></script>
+
 </body>
 </html>

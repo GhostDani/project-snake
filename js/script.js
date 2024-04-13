@@ -11,13 +11,17 @@ const buttonPlay = document.querySelector(".btn-play")
 const ButtonPlayHome = document.querySelector(".play-home")
 const buttonPauseGame = document.querySelector(".btn-pause")
 const ButtonResume = document.querySelector(".btn-resume")
+const menuInGame = document.querySelector(".menu")
+const closeMenu = document.querySelector(".close-menu")
 
 const audio = new Audio("./assets/audio.mp3")
 const gameOverAudio = new Audio("./assets/gameover.mp3")
 const audioPlay = new Audio("./assets/play.mp3")
 const titleAudio = new Audio("./assets/Title.mp3")
 const clickAudio = new Audio("./assets/click.mp3")
-themeAudio = new Audio("./assets/theme.mp3")
+const themeAudio = new Audio("./assets/theme.mp3")
+const audioTransition = new Audio("./assets/transition.mp3")
+const audioWin = new Audio("./assets/win.mp3")
 
 const size = 30
 
@@ -203,7 +207,7 @@ const missionPassed = () => {
     finalScore.innerText = score.innerText
     canvas.style.filter = "blur(5px)"
     pause()
-    themeAudio.play()
+    audioWin.play()
     direction = undefined
    
 }}
@@ -276,7 +280,14 @@ ButtonResume.addEventListener("click", () => {
 
 ButtonPlayHome.addEventListener("click", () => {
 clickAudio.play()
+menuInGame.style.display = "flex"
+canvas.style.filter = "blur(5px)"
 })
+closeMenu.addEventListener("click", () => {
+    clickAudio.play()
+   menuInGame.style.display = "none"
+    canvas.style.filter = "none"
+ })
 
                 //relógio
 
@@ -324,3 +335,24 @@ function watch(){
     document.getElementById('watch').innerText=twoDigits(hr)+':'+twoDigits(min)+':'+twoDigits(sec)
 }
                     //      Fim Relógio 
+                    function toggleFullScreen() {
+          
+                        if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+                         (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+                          if (document.documentElement.requestFullScreen) {  
+                            document.documentElement.requestFullScreen();  
+                          } else if (document.documentElement.mozRequestFullScreen) {  
+                            document.documentElement.mozRequestFullScreen();  
+                          } else if (document.documentElement.webkitRequestFullScreen) {  
+                            document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+                          }  
+                        } else {  
+                          if (document.cancelFullScreen) {  
+                            document.cancelFullScreen();  
+                          } else if (document.mozCancelFullScreen) {  
+                            document.mozCancelFullScreen();  
+                          } else if (document.webkitCancelFullScreen) {  
+                            document.webkitCancelFullScreen();  
+                          }  
+                        }  
+                      } 

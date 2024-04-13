@@ -9,9 +9,10 @@ const menuPass = document.querySelector(".menu-pass")
 const menuPause = document.querySelector(".menu-pause")
 const buttonPlay = document.querySelector(".btn-play")
 const ButtonPlayHome = document.querySelector(".play-home")
-const buttonReset = document.querySelector(".btn-reset")
 const buttonPauseGame = document.querySelector(".btn-pause")
 const ButtonResume = document.querySelector(".btn-resume")
+const menuInGame = document.querySelector(".menu")
+const closeMenu = document.querySelector(".close-menu")
 
 const audio = new Audio("./assets/audio.mp3")
 const gameOverAudio = new Audio("./assets/gameover.mp3")
@@ -19,6 +20,7 @@ const audioPlay = new Audio("./assets/play.mp3")
 const titleAudio = new Audio("./assets/Title.mp3")
 const clickAudio = new Audio("./assets/click.mp3")
 const themeAudio = new Audio("./assets/theme.mp3")
+const audioTransition = new Audio("./assets/transition.mp3")
 
 const size = 30
 
@@ -244,8 +246,9 @@ document.addEventListener("keydown", ({ key }) => {
     }
 })
 
-buttonReset.addEventListener("click", () => {
-    score.innerText = "500"
+buttonPlay.addEventListener("click", () => {
+    clickAudio.play()
+    score.innerText = "00"
     menu.style.display = "none"
     canvas.style.filter = "none"
     titleAudio.play()
@@ -253,10 +256,8 @@ buttonReset.addEventListener("click", () => {
     stop()
     start()
 })
-
 buttonPauseGame.addEventListener("click", () => {
     clickAudio.play()
-    themeAudio.play()
     menuPause.style.display = "flex"
     direction = undefined
     canvas.style.filter = "blur(5px)"
@@ -276,7 +277,15 @@ ButtonResume.addEventListener("click", () => {
 
 ButtonPlayHome.addEventListener("click", () => {
 clickAudio.play()
+menuInGame.style.display = "flex"
+canvas.style.filter = "blur(5px)"
 })
+
+closeMenu.addEventListener("click", () => {
+    clickAudio.play()
+   menuInGame.style.display = "none"
+    canvas.style.filter = "none"
+ })
 
                 //relógio
 
@@ -324,3 +333,25 @@ function watch(){
     document.getElementById('watch').innerText=twoDigits(hr)+':'+twoDigits(min)+':'+twoDigits(sec)
 }
                     //      Fim Relógio 
+
+                    function toggleFullScreen() {
+          
+                        if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+                         (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+                          if (document.documentElement.requestFullScreen) {  
+                            document.documentElement.requestFullScreen();  
+                          } else if (document.documentElement.mozRequestFullScreen) {  
+                            document.documentElement.mozRequestFullScreen();  
+                          } else if (document.documentElement.webkitRequestFullScreen) {  
+                            document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+                          }  
+                        } else {  
+                          if (document.cancelFullScreen) {  
+                            document.cancelFullScreen();  
+                          } else if (document.mozCancelFullScreen) {  
+                            document.mozCancelFullScreen();  
+                          } else if (document.webkitCancelFullScreen) {  
+                            document.webkitCancelFullScreen();  
+                          }  
+                        }  
+                      } 
