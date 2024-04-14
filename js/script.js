@@ -286,28 +286,28 @@ ButtonLeft.addEventListener("click", () => {
     if (direction != "right") {
         direction = "left"
     }
-    
+    navigator.vibrate(250)
 })
 
 ButtonRight.addEventListener("click", () => {
     if (direction != "left") {
         direction = "right"
     }
-    
+    navigator.vibrate(250)
 })
 
 ButtonDown.addEventListener("click", () => {
     if (direction != "up") {
         direction = "down"
     }
-
+    navigator.vibrate(250)
 })
 
 ButtonUp.addEventListener("click", () => {
     if (direction != "down") {
         direction = "up"
     }
-
+    navigator.vibrate(250)
 })
 
 ButtonPlayHome.addEventListener("click", () => {

@@ -18,28 +18,6 @@ body {
     color: white;
 }
 
-@media (max-width: 480px) {
-   canvas {
-    width: 400px;
-    height: 400px;
-     }
- .btn-pause{
-    bottom: 1px;
-    margin-left: 12.3rem;
- }
- 
-  .score{
-    font-size: .3rem;
-  }
-  .score--value{
-    font-size: 1px;
-  }
-  ver{
-    position:absolute;
-    bottom: 1px;
-    margin-left: 3rem;
-  }
-}
 
 #watch{
     display: flex;
@@ -223,16 +201,50 @@ img{
 
 .tutorial-btns{
     margin-top: 15px;
-     display: flex;
+     display: none;
      align-items: center;
      justify-content: center;
-     gap: 15px;
-     padding: 5px;
-     font-size: 12px;
+     gap: 20px;
 }
 
 .symbols{
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
     border: 1px solid white;
 }
+
+.symbols:hover{
+    background-color: rgba(255, 255, 255, 0.253);
+    color: #1DBEC0;
+    border: 1px solid #1DBEC0;
+}
+
+@media screen and (max-width: 480px) {
+    canvas {
+     width: 400px;
+     height: 400px;
+      }
+  .btn-pause{
+     margin-left: 19.7rem !important;
+     bottom: 13.9rem !important;
+  }
+  
+  .btn-resume{
+    margin-left: 23.3rem;
+    bottom: 13.9rem;
+    }
+   .ver{
+     margin-left: 21rem !important;
+     bottom: 35px;
+   }
+   .tutorial-btns{
+     display: flex !important;
+   }
+   .game-over{
+    font-size: 2rem;
+   }
+   #watch{
+    margin-left: -22rem;
+    }
+}
+ 
