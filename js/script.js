@@ -8,6 +8,10 @@ const menu = document.querySelector(".menu-screen")
 const menuPass = document.querySelector(".menu-pass")
 const menuPause = document.querySelector(".menu-pause")
 const buttonPlay = document.querySelector(".btn-play")
+const ButtonLeft = document.querySelector(".btn-left")
+const ButtonRight = document.querySelector(".btn-right")
+const ButtonUp = document.querySelector(".btn-up")
+const ButtonDown = document.querySelector(".btn-down")
 const ButtonPlayHome = document.querySelector(".play-home")
 const buttonPauseGame = document.querySelector(".btn-pause")
 const ButtonResume = document.querySelector(".btn-resume")
@@ -233,7 +237,7 @@ gameLoop()
 document.addEventListener("keydown", ({ key }) => {
     if (key == "ArrowRight" && direction != "left") {
         direction = "right"
-        play()
+    
     }
 
     if (key == "ArrowLeft" && direction != "right") {
@@ -276,6 +280,34 @@ ButtonResume.addEventListener("click", () => {
     start()
     titleAudio.play()
     
+})
+
+ButtonLeft.addEventListener("click", () => {
+    if (direction != "right") {
+        direction = "left"
+    }
+    
+})
+
+ButtonRight.addEventListener("click", () => {
+    if (direction != "left") {
+        direction = "right"
+    }
+    
+})
+
+ButtonDown.addEventListener("click", () => {
+    if (direction != "up") {
+        direction = "down"
+    }
+
+})
+
+ButtonUp.addEventListener("click", () => {
+    if (direction != "down") {
+        direction = "up"
+    }
+
 })
 
 ButtonPlayHome.addEventListener("click", () => {
@@ -335,6 +367,8 @@ function watch(){
     document.getElementById('watch').innerText=twoDigits(hr)+':'+twoDigits(min)+':'+twoDigits(sec)
 }
                     //      Fim Relógio 
+
+                    //TEla Cheia
                     function toggleFullScreen() {
           
                         if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
@@ -356,3 +390,13 @@ function watch(){
                           }  
                         }  
                       } 
+                        //TEla Cheia fim
+
+     const texto=document.querySelector("#points");
+     const endpoint="points.txt"
+
+     fetch(endpoint)
+.then(res=>res.text())  
+.then(res=>{
+    res=JSON.parse(res);
+})                    

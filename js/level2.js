@@ -13,6 +13,7 @@ const buttonPauseGame = document.querySelector(".btn-pause")
 const ButtonResume = document.querySelector(".btn-resume")
 const menuInGame = document.querySelector(".menu")
 const closeMenu = document.querySelector(".close-menu")
+const buttonReset = document.querySelector(".btn-reset")
 
 const audio = new Audio("./assets/audio.mp3")
 const gameOverAudio = new Audio("./assets/gameover.mp3")
@@ -256,6 +257,18 @@ buttonPlay.addEventListener("click", () => {
     stop()
     start()
 })
+
+buttonReset.addEventListener("click", () => {
+    clickAudio.play()
+    score.innerText = "500"
+    menu.style.display = "none"
+    canvas.style.filter = "none"
+    titleAudio.play()
+    snake = [initialPosition]
+    stop()
+    start()
+})
+
 buttonPauseGame.addEventListener("click", () => {
     clickAudio.play()
     menuPause.style.display = "flex"

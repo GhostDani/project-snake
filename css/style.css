@@ -18,6 +18,29 @@ body {
     color: white;
 }
 
+@media (max-width: 480px) {
+   canvas {
+    width: 400px;
+    height: 400px;
+     }
+ .btn-pause{
+    bottom: 1px;
+    margin-left: 12.3rem;
+ }
+ 
+  .score{
+    font-size: .3rem;
+  }
+  .score--value{
+    font-size: 1px;
+  }
+  ver{
+    position:absolute;
+    bottom: 1px;
+    margin-left: 3rem;
+  }
+}
+
 #watch{
     display: flex;
     flex-direction: column;
@@ -196,4 +219,20 @@ img{
     align-items: right;
     justify-content: right;
     font-size: .6rem;
+}
+
+.tutorial-btns{
+    margin-top: 15px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 15px;
+     padding: 5px;
+     font-size: 12px;
+}
+
+.symbols{
+    font-size: 3rem;
+    font-weight: 700;
+    border: 1px solid white;
 }
