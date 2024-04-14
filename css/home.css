@@ -131,3 +131,20 @@ img:hover, .symbols:hover{
     padding: 5px;
     font-size: 12px;
 }
+
+@media screen and (max-width: 480px) {
+    body {
+    background-size:contain;
+    display: flex; 
+    }
+.game-container{
+    width: 400px;
+    height:800px;
+}
+.title{
+    font-size: 3rem;
+}
+.ver{
+    margin-left: 20rem !important;
+    bottom: 35px;}
+}
