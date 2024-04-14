@@ -215,8 +215,8 @@ img{
 
 .symbols:hover{
     background-color: rgba(255, 255, 255, 0.253);
-    color: #1DBEC0;
-    border: 1px solid #1DBEC0;
+    color: #000000;
+    border: 1px solid #000000;
 }
 
 @media screen and (max-width: 480px) {
@@ -225,13 +225,15 @@ img{
      height: 400px;
       }
   .btn-pause{
+    position: relative;
      margin-left: 19.7rem !important;
-     bottom: 13.9rem !important;
+     bottom: 135px;
   }
   
   .btn-resume{
+    position: relative;
     margin-left: 23.3rem;
-    bottom: 13.9rem;
+    bottom: 165px;
     }
    .ver{
      margin-left: 21rem !important;
