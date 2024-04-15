@@ -136,15 +136,17 @@ img:hover, .symbols:hover{
     body {
     background-size:contain;
     display: flex; 
+    margin-top: 1rem;
     }
 .game-container{
     width: 400px;
-    height:800px;
+    height:700px;
 }
 .title{
     font-size: 3rem;
 }
 .ver{
-    margin-left: 20rem !important;
+    font-size: .7rem;
+    margin-left: 17rem !important;
     bottom: 35px;}
 }

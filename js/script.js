@@ -286,34 +286,35 @@ ButtonLeft.addEventListener("click", () => {
     if (direction != "right") {
         direction = "left"
     }
-    navigator.vibrate(150)
+    navigator.vibrate(50)
 })
 
 ButtonRight.addEventListener("click", () => {
     if (direction != "left") {
         direction = "right"
     }
-    navigator.vibrate(150)
+    navigator.vibrate(50)
 })
 
 ButtonDown.addEventListener("click", () => {
     if (direction != "up") {
         direction = "down"
     }
-    navigator.vibrate(150)
+    navigator.vibrate(50)
 })
 
 ButtonUp.addEventListener("click", () => {
     if (direction != "down") {
         direction = "up"
     }
-    navigator.vibrate(150)
+    navigator.vibrate(50)
 })
 
 ButtonPlayHome.addEventListener("click", () => {
 clickAudio.play()
 menuInGame.style.display = "flex"
 canvas.style.filter = "blur(5px)"
+direction = undefined
 })
 closeMenu.addEventListener("click", () => {
     clickAudio.play()
