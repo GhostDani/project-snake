@@ -8,6 +8,10 @@ const menu = document.querySelector(".menu-screen")
 const menuPass = document.querySelector(".menu-pass")
 const menuPause = document.querySelector(".menu-pause")
 const buttonPlay = document.querySelector(".btn-play")
+const ButtonLeft = document.querySelector(".btn-left")
+const ButtonRight = document.querySelector(".btn-right")
+const ButtonUp = document.querySelector(".btn-up")
+const ButtonDown = document.querySelector(".btn-down")
 const ButtonPlayHome = document.querySelector(".play-home")
 const buttonPauseGame = document.querySelector(".btn-pause")
 const ButtonResume = document.querySelector(".btn-resume")
@@ -269,35 +273,47 @@ buttonReset.addEventListener("click", () => {
     start()
 })
 
-buttonPauseGame.addEventListener("click", () => {
-    clickAudio.play()
-    menuPause.style.display = "flex"
-    direction = undefined
-    canvas.style.filter = "blur(5px)"
-    pause()
-   
-}
-);
-
-ButtonResume.addEventListener("click", () => {
-    clickAudio.play()
-    menuPause.style.display = "none"
-    canvas.style.filter = "none"
-    start()
-    titleAudio.play()
-    
-})
 
 ButtonPlayHome.addEventListener("click", () => {
 clickAudio.play()
 menuInGame.style.display = "flex"
 canvas.style.filter = "blur(5px)"
+pause()
+})
+
+ButtonLeft.addEventListener("click", () => {
+    if (direction != "right") {
+        direction = "left"
+    }
+    navigator.vibrate(50)
+})
+
+ButtonRight.addEventListener("click", () => {
+    if (direction != "left") {
+        direction = "right"
+    }
+    navigator.vibrate(50)
+})
+
+ButtonDown.addEventListener("click", () => {
+    if (direction != "up") {
+        direction = "down"
+    }
+    navigator.vibrate(50)
+})
+
+ButtonUp.addEventListener("click", () => {
+    if (direction != "down") {
+        direction = "up"
+    }
+    navigator.vibrate(50)
 })
 
 closeMenu.addEventListener("click", () => {
     clickAudio.play()
    menuInGame.style.display = "none"
     canvas.style.filter = "none"
+ start()
  })
 
                 //relógio
@@ -347,24 +363,23 @@ function watch(){
 }
                     //      Fim Relógio 
 
-                    function toggleFullScreen() {
-          
-                        if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
-                         (!document.mozFullScreen && !document.webkitIsFullScreen)) {
-                          if (document.documentElement.requestFullScreen) {  
-                            document.documentElement.requestFullScreen();  
-                          } else if (document.documentElement.mozRequestFullScreen) {  
-                            document.documentElement.mozRequestFullScreen();  
-                          } else if (document.documentElement.webkitRequestFullScreen) {  
-                            document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
-                          }  
-                        } else {  
-                          if (document.cancelFullScreen) {  
-                            document.cancelFullScreen();  
-                          } else if (document.mozCancelFullScreen) {  
-                            document.mozCancelFullScreen();  
-                          } else if (document.webkitCancelFullScreen) {  
-                            document.webkitCancelFullScreen();  
-                          }  
+function toggleFullScreen() {
+    if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+        (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+        document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+         document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+        document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+        }  
+    } else {  
+            if (document.cancelFullScreen) {  
+                document.cancelFullScreen();  
+            } else if (document.mozCancelFullScreen) {  
+                        document.mozCancelFullScreen();  
+            } else if (document.webkitCancelFullScreen) {  
+                        document.webkitCancelFullScreen();  
                         }  
-                      } 
+         }  
+    } 

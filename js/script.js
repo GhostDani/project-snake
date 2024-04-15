@@ -13,8 +13,6 @@ const ButtonRight = document.querySelector(".btn-right")
 const ButtonUp = document.querySelector(".btn-up")
 const ButtonDown = document.querySelector(".btn-down")
 const ButtonPlayHome = document.querySelector(".play-home")
-const buttonPauseGame = document.querySelector(".btn-pause")
-const ButtonResume = document.querySelector(".btn-resume")
 const menuInGame = document.querySelector(".menu")
 const closeMenu = document.querySelector(".close-menu")
 
@@ -263,24 +261,6 @@ buttonPlay.addEventListener("click", () => {
     stop()
     start()
 })
-buttonPauseGame.addEventListener("click", () => {
-    clickAudio.play()
-    menuPause.style.display = "flex"
-    direction = undefined
-    canvas.style.filter = "blur(5px)"
-    pause()
-   
-}
-);
-
-ButtonResume.addEventListener("click", () => {
-    clickAudio.play()
-    menuPause.style.display = "none"
-    canvas.style.filter = "none"
-    start()
-    titleAudio.play()
-    
-})
 
 ButtonLeft.addEventListener("click", () => {
     if (direction != "right") {
@@ -315,11 +295,13 @@ clickAudio.play()
 menuInGame.style.display = "flex"
 canvas.style.filter = "blur(5px)"
 direction = undefined
+pause()
 })
 closeMenu.addEventListener("click", () => {
     clickAudio.play()
    menuInGame.style.display = "none"
     canvas.style.filter = "none"
+    start()
  })
 
                 //relógio

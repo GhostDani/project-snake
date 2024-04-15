@@ -11,7 +11,7 @@
 body {
     background-color:#3f5f2e;
     display: flex;
-    min-height: 100vh;
+    margin-top: 3rem;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -146,7 +146,7 @@ canvas {
     font-size: 1rem;
     font-weight: 600;
     color: #333333;
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,6 +180,7 @@ img{
     height: 200px;
 }
 .btn-pause{
+    display: none !important;
     position: fixed;
     bottom: 83px;
     margin-left: 32.3rem;
@@ -193,7 +194,7 @@ img{
     position: fixed;
     bottom: 83px;
     margin-left: 36rem;
-    display: inline;
+    display: none;
     align-items: right;
     justify-content: right;
     font-size: .6rem;
@@ -219,6 +220,29 @@ img{
     border: 1px solid #000000;
 }
 
+.btn-up{
+    position: absolute;
+    bottom: 12.9rem;
+
+}
+
+.btn-left{
+    position: absolute;
+    bottom: 8.5rem;
+    margin-right: 8rem;
+}
+
+.btn-right{
+    position: absolute;
+    bottom: 8.5rem;
+    margin-left: 8rem;
+}
+
+.btn-down{
+    position: absolute;
+    bottom: 4rem;
+}
+
 @media screen and (max-width: 480px) {
     canvas {
      width: 400px;
@@ -226,7 +250,7 @@ img{
       }
   .btn-pause{
     position: relative;
-     margin-left: 19.7rem !important;
+     margin-left: 19.7rem ;
      bottom: 133px;
   }
   
