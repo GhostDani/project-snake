@@ -13,7 +13,7 @@
 body {
     margin-top: 2rem;
     background-image: url("../assets/background.jpg");
-    background-size: cover;
+    background-size:cover;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -134,17 +134,15 @@ img:hover, .symbols:hover{
 
 @media screen and (max-width: 480px) {
     body {
-    background-size:contain;
-    display: flex; 
     margin-top: 2.5rem;
     }
 .game-container{
     width: 400px;
     height:700px;
-}
+    }
 .title{
     font-size: 3rem;
-}
+    }
 .ver{
     font-size: .7rem;
     margin-left: 17rem !important;
